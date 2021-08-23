@@ -1,0 +1,135 @@
+<html>
+  <title>Calculator</title>
+<body background="calculator.jpg">
+<center>
+
+<font size="7" face="algerian" style = "color:#fc000075" >Calculator</font>
+<script>
+
+function myfunction(calc){
+document.getElementById("demo").value +=calc
+}
+function myfunction2()  { 
+let x = document.getElementById("demo").value 
+let y = eval(x)  
+ document.getElementById("demo").value= y
+}
+function myfunction4()  { 
+let x = document.getElementById("demo").value 
+let y = eval(x)  
+ document.getElementById("demo1").value= y
+}
+function myfunction3(){
+document.getElementById("demo").value=""
+document.getElementById("demo1").value=""
+}
+function doMath(){
+  var input = document.getElementById("demo");
+  var input1 = eval(input.value)
+  var result = Math.sqrt(input1);
+  document.getElementById("demo").value = result;
+}
+function doMath1(){
+  var input=document.getElementById("demo");
+  var input1 = eval(input.value)
+  var result = Math.cbrt(input1);
+  document.getElementById("demo").value = result;
+}
+function doMath2(){
+  var input = document.getElementById("demo")
+  var result = input.value * input.value * input.value
+  input.value = result
+}
+function doMath3(){
+  var input = document.getElementById("demo")
+  var result = input.value * input.value
+  input.value = result
+}
+</script><br><br>
+<input type="text" class="input" onkeyup="myfunction4()" placeholder="0" id="demo" readonly/><br>
+<input type="text" class="input1" placeholder="0" id="demo1" placeholder="0" readonly/><br>
+<style>
+  .button4[type=button] {
+    
+    color: #000000;
+    border-radius: 15px;}
+label{
+  font-size: 18px;;}
+.button4[type=button]:hover {
+  background-color:#3cff006e;
+  color: #ffffff;}
+  .input{
+    border-bottom: none; 
+    width:600px; 
+    height:50px; 
+    color:#ffffff; 
+    font-size:25px; 
+    background:#bef10686;
+    padding: 10;
+    padding-bottom: 10;
+    text-align: right;
+  }
+  .input1{
+    border-top: none; 
+    width:600px; 
+    height:20px; 
+    color:#ffffff; 
+    font-size:18px; 
+    background:#bef10686;
+    padding: 10;
+    padding-bottom: 20;
+    text-align: right;
+  }
+  .input1:focus{
+    outline: none;
+  }
+  .input:focus{
+    outline: none;
+  }
+</style>
+<table>
+<tr>
+</tr>
+<tr>
+
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction('('); myfunction4()"><h1>(</h1></button> </td>
+
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction(')'); myfunction4()"><h1>)</h1></button> </td>
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction('%'); myfunction4()"><h1>%</h1></button> </td>
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction3('')"><h1>AC</h1></button> </td>
+</tr>
+<tr>
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('1'); myfunction4()"><h1>1</h1></button> </td>
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('2'); myfunction4()"><h1>2</h1></button> </td>
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('3'); myfunction4()"><h1>3</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction('-'); myfunction4()"><h1>-</h1></button> </td>
+</tr>
+<tr>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('4'); myfunction4()"><h1>4</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('5'); myfunction4()"><h1>5</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('6'); myfunction4()"><h1>6</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction('+'); myfunction4()"><h1>+</h1></button> </td>
+</tr>
+<tr>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('7'); myfunction4()"><h1>7</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('8'); myfunction4()"><h1>8</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('9'); myfunction4()"><h1>9</h1></button></td>-
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction('*'); myfunction4()"><h1>*</h1></button> </td>
+</tr>
+<tr>
+<td><button type="button" class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('0'); myfunction4()"><h1>0</h1></button> </td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#3366ff7c" onclick="myfunction('.'); myfunction4()"><h1>.</h1></button></td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#ffff0080" onclick="myfunction2(); myfunction4()"><h1>=</h1></button></td>
+<td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction('/'); myfunction4()"><h1>/</h1></button></td>
+</tr>
+<tr>
+  <td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction2(); doMath3(); myfunction4()"><h1>n<sup>2</sup></h1></button></td>
+  <td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction2(); doMath2(); myfunction4()"><h1>n<sup>3</sup></h1></button></td>
+  <td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction2(); doMath1(); myfunction4()"><h1><sup>3</sup>√</h1></button></td>
+  <td><button type="button"class=" button4" style= "width:140px; height:60px; font-size: 10px; background-color:#00ffdd83" onclick="myfunction2(); doMath(); myfunction4()"><h1><sup>2</sup>√</h1></button></td>
+</tr>
+</table>
+<font color="white">Made By Ishan Khekare</font>
+</center>
+</body>
+</html>
